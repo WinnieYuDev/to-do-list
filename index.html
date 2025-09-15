@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="To-Do List">
+  <meta name="keywords" content="todo, task, list">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Glory:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <aside class="rightNav">
+    <div class="datetime">
+      <div class="time"></div>
+      <div class="date"></div>
+    </div>
+    <p>My Day</p>
+  </aside>
+
+  <main>
+    <h1>Welcome.</h1>
+    <p>What would you like to do today?</p>
+
+    <div class="container">
+      <h2>To-Do List</h2>
+
+      <div class="task-bar">
+        <input type="text" placeholder="Add new task...">
+        <button class="addTask">Add</button>
+      </div>
+
+      <div class="list">
+        <ul></ul>
+      </div>
+
+      <div class="clearButton">
+        <button class="clearCompleted">Clear Completed</button>
+        <button class="clearAll">Clear All</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

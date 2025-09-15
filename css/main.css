@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Architects Daughter", "Glory", sans-serif;
+  background: rgb(105, 121, 192);
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  min-width: 250px;
+}
+
+.datetime {
+  font-size: 1rem;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 2rem;
+}
+
+.date {
+  margin-top: 12px;
+  font-size: 1.25rem;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  width: 75%;
+  min-width: 300px;
+}
+
+.container {
+  background: rgb(236, 235, 133);
+  border: 1.5px solid black;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p{
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;    
+}
+
+.task-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(98, 31, 119, 0.05);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+input::placeholder {
+  color: gray;
+}
+
+.task-bar button {
+  border: none;
+  outline: none;
+  background: rgb(113, 128, 202);
+  color: white;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.task-bar button:hover {
+  background: rgb(132, 148, 218);
+}
+
+.task-bar button:active {
+  background: rgb(81, 105, 212);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 0.75rem 0 0.75rem 2.5rem;
+  position: relative;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url('../images/unchecked.png');
+  background-size: cover;
+}
+
+ul li.checked {
+  color: rgb(64, 74, 82);
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('../images/checked.png');
+    background-color:rgb(21, 62, 109);
+}
+
+.clearButton {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.clearButton button {
+  background: rgb(113, 128, 202);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.clearButton button:hover {
+  background: rgb(132, 148, 218);
+}
+
+.clearButton button:active {
+  background: rgb(81, 105, 212);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  aside,
+  main {
+    width: 100%;
+  }
+
+  .task-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-bar button {
+    width: 100%;
+  }
+}

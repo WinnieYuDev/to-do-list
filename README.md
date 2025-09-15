@@ -1,22 +1,38 @@
-# ✅ Week05 Bootcamp2019 Project: Todo List
+# Description
+<img width="1909" height="891" alt="Screenshot 2025-09-12 031134" src="https://github.com/user-attachments/assets/6ad4d606-c334-454b-8732-dfc58e72766c" />
 
-### Goal: Build a Simple Todo List
+## This to-do list allows users to:
 
-### How to submit your code for review:
+-Add new tasks input by user using click and enter button
 
-- Fork and clone this repo
-- Create a new branch called answer
-- Checkout answer branch
-- Push to your fork
-- Issue a pull request
-- Your pull request description should contain the following:
-  - (1 to 5 no 3) I completed the challenge
-  - (1 to 5 no 3) I feel good about my code
-  - Anything specific on which you want feedback!
+-Check completed tasks
 
-Example:
-```
-I completed the challenge: 5
-I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
-```
+-Delete and clear tasks
+
+
+## Tech Used
+
+
+-HTML
+
+-CSS
+
+-JavaScript
+
+## Lessons Learned
+
+-How to create a local and remote repository
+
+-How to fork/clone/push/pull/commit on Github
+
+-Intergrate Github with VS Code
+
+-Using JS to submit and clear to do tasks
+
+-Using HTML to create structure of website for to do list
+
+-Styling website using CSS
+
+## Notes
+
+Created a simplistic to do list that can be used by all ages
