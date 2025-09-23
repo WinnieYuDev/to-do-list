@@ -1,3 +1,5 @@
+/* help and reference from youtube tutorials, https://www.youtube.com/watch?v=G0jO8kUrg-I, https://www.youtube.com/watch?v=_L6vpV_3SaE */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -170,17 +172,13 @@ ul li.checked::before {
   body {
     flex-direction: column;
   }
-
-  aside,
-  main {
+  aside, main {
     width: 100%;
   }
-
   .task-bar {
     flex-direction: column;
     align-items: stretch;
   }
-
   .task-bar button {
     width: 100%;
   }

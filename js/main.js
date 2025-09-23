@@ -1,4 +1,4 @@
-// Auto-load and update date and time. Referenced from youtube and stack overflow
+// Auto-load and update date and time. Referenced from youtube, https://www.youtube.com/watch?v=_L6vpV_3SaE, and stack overflow
 const timeEl = document.querySelector(".time");
 const dateEl = document.querySelector(".date");
 
@@ -19,7 +19,8 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock(); // Run once on load
 
-// Add tasks with on click and enter button
+//help and reference from youtube tutorial, https://www.youtube.com/watch?v=G0jO8kUrg-I
+//Add tasks with on click and enter button
 const ul = document.querySelector("ul");
 const input = document.querySelector("input");
 const addButton = document.querySelector(".addTask");
@@ -27,15 +28,21 @@ const clearButton = document.querySelector(".clearCompleted");
 const clearAll = document.querySelector(".clearAll");
 
 function addTask() {
-  if (input.value.trim() !== "") {
-    const li = document.createElement("li");
-    li.textContent = input.value;
+  if (input.value === '') {
+    alert("Please enter a task.");
+  } else {
+    let li = document.createElement("li");
+    li.innerHTML = input.value;
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7";
+    li.appendChild(span);
     ul.appendChild(li);
-    input.value = "";
-    saveData();
   }
+  input.value = "";
+  saveData();
 }
-addButton.addEventListener("click", addTask);
+
+//reference from stack overflow and Google AI overview on how to trigger button click on enter key press
 
 function handleEnterKey(e) {
   if (e.key === "Enter") {
@@ -52,12 +59,12 @@ function toggleTaskCompletion(e) {
 }
 ul.addEventListener("click", toggleTaskCompletion);
 
-//Clear all tasks button and clear only completed button
+//reference from stack overflow, https://stackoverflow.com/questions/72576249/to-do-list-clear-button and Google AI overview clear all tasks button and clear only completed button
 
 function clearCompletedTasks() {
   const items = ul.querySelectorAll("li.checked");
   for (let i = 0; i < items.length; i++) {
-    items[i].remove();
+    items[i].remove(); // Remove only completed tasks, removes an element from its parent node
   }
   saveData();
 }
@@ -67,13 +74,13 @@ clearButton.addEventListener("click", clearCompletedTasks);
 function clearAllTasks() {
   const allItems = ul.querySelectorAll("li");
   for (let i = 0; i < allItems.length; i++) {
-    allItems[i].remove();
+    allItems[i].remove(); // Remove all tasks, removes an element from its parent node
   }
   saveData();
 }
 clearAll.addEventListener("click", clearAllTasks);
 
-// Saves data and shows
+//reference from stack overflow, how to save data and show
 function saveData() {
   localStorage.setItem("data", ul.innerHTML);
 }
