@@ -19,7 +19,7 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock(); // Run once on load
 
-//help and reference from youtube tutorial, https://www.youtube.com/watch?v=G0jO8kUrg-I
+//help and reference from youtube tutorial, https://www.youtube.com/watch?v=G0jO8kUrg-I and Google AI overview on how to add and remove tasks
 //Add tasks with on click and enter button
 const ul = document.querySelector("ul");
 const input = document.querySelector("input");
